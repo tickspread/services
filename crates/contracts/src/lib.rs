@@ -127,6 +127,10 @@ pub mod test {
     }
 }
 
+pub mod circles_hub {
+    ethcontract::contract!("artifacts/CirclesHub.json");
+}
+
 #[cfg(test)]
 mod tests {
     const MAINNET: u64 = 1;

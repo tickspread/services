@@ -4,6 +4,8 @@ pub mod slippage;
 pub mod uniswap_v2;
 pub mod uniswap_v3;
 pub mod zeroex;
+pub mod circle_ubi;
+pub use circle_ubi::{CircleUbiOrder, CircleUbiSettlementHandler};
 
 #[cfg(test)]
 use derivative::Derivative;
@@ -45,6 +47,7 @@ pub enum Liquidity {
     BalancerStable(StablePoolOrder),
     LimitOrder(LimitOrder),
     Concentrated(ConcentratedLiquidity),
+    CircleUbi(CircleUbiOrder),
 }
 
 /// A trait associating some liquidity model to how it is executed and encoded
